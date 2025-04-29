@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/employee")
+@RequestMapping("/api/employee")
 @RequiredArgsConstructor
 @CrossOrigin
 public class EmployeeController {
@@ -30,11 +30,6 @@ public class EmployeeController {
     @PostMapping("/add")
     public void add(@RequestBody Employee employee){
         employeeService.add(employee);
-    }
-
-    @GetMapping("/search")
-    public Employee search(@RequestParam Long id){
-        return employeeService.search(id);
     }
 
     @PutMapping("/update")
