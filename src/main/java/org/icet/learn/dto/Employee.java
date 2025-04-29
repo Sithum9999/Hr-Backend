@@ -1,5 +1,6 @@
 package org.icet.learn.dto;
 
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 public class Employee {
     private Long id;
     private String name;
+    @Column(unique = true)
     private String email;
     private String department;
     private String createdAt;
