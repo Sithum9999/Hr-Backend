@@ -32,6 +32,11 @@ public class EmployeeController {
         employeeService.add(employee);
     }
 
+    @GetMapping("/search")
+    public Employee search(@RequestParam Long id){
+        return employeeService.search(id);
+    }
+
     @PutMapping("/update")
     public void update(@RequestBody Employee employee){
         employeeService.update(employee);

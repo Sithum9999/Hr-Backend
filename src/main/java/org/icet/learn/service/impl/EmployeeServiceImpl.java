@@ -34,6 +34,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
+    public Employee search(Long id) {
+        return modelMapper.map(employeeDao.findById(id),Employee.class);
+    }
+
+    @Override
     public void update(Employee employee) {
         employeeDao.save(modelMapper.map(employee, EmployeeEntity.class));
     }
