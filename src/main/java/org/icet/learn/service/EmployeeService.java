@@ -14,4 +14,6 @@ public interface EmployeeService {
     void update(Employee employee);
 
     void delete(Long id);
+
+    boolean existsByEmail(String email);
 }

@@ -47,4 +47,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void delete(Long id) {
         employeeDao.deleteById(id);
     }
+
+    @Override
+    public boolean existsByEmail(String email) {
+        return employeeDao.existsByEmail(email);
+    }
 }
